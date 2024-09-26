@@ -1,0 +1,41 @@
+// styles/ProfileCard.module.scss
+
+// Variables
+$primary-color: #3498db;
+$border-radius: 8px;
+
+// Mixins
+@mixin button-style($bg-color) {
+  background-color: $bg-color;
+  color: #fff;
+  border-radius: $border-radius;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// Anidación
+.profileCard {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: $border-radius;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .header {
+    font-size: 1.5em;
+    color: $primary-color;
+  }
+
+  .description {
+    color: #666;
+  }
+
+  .footer {
+    @include button-style($primary-color); // Uso del mixin
+  }
+}
