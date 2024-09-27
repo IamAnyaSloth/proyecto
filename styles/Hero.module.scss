@@ -1,0 +1,11 @@
+// styles/Hero.module.scss
+
+.hero {
+    background: linear-gradient(135deg, #4fc3ff 0%, #003c71 100%);
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%); // Mejora la forma del fondo
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); // Añade sombra
+}

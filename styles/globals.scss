@@ -1,24 +1,113 @@
-// Variables globales
-$primary-color: #00254b;
-$secondary-color: #00a7e1;
-$background-color: #d9f0f7;
-$button-hover-color: #005f99;
+/* styles/globals.scss */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-// Estilos globales
 body {
-  font-family: Arial, sans-serif;
-  background-color: $background-color;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+    font-family: 'Roboto', sans-serif; /* Cambié a 'Roboto' */
+    background: linear-gradient(to bottom, #f4f4f4, #e6f2f6);
+    color: #333;
+}
+
+header {
+    background-color: #0d1b4c;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    background-color: #0089a7;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #002d4f;
+}
+
+.hero {
+    background: linear-gradient(135deg, #4fc3ff 0%, #003c71 100%);
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+}
+
+.intro {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #0089a7;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #002d4f;
+}
+
+.servicios {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.servicios h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #0d1b4c;
+}
+
+.servicios-container {
+    display: flex;                   
+    justify-content: space-around;   /* Distribuye el espacio horizontalmente */
+    align-items: flex-start;         /* Alinea los elementos en la parte superior */
+    gap: 40px;                      
+    flex-wrap: wrap;                /* Permite que los elementos se ajusten a la siguiente línea */
+}
+
+.servicio {
+    flex: 1 1 200px;                /* Permite que crezca, se reduzca y tenga un ancho mínimo */
+    max-width: 300px;               /* Ajusta el ancho máximo según sea necesario */
 }
 
 footer {
-  background-color: $primary-color;
-  padding: 20px;
-  color: white;
-}
-
-h1 {
-  color: $primary-color;
+    background-color: #0d1b4c;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
 }

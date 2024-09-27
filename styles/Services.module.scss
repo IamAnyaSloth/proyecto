@@ -1,0 +1,47 @@
+// styles/Services.module.scss
+
+.servicios {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.servicios h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #0d1b4c;
+    text-transform: uppercase; // Añade un estilo más moderno
+}
+
+.servicios-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.servicio {
+    background-color: #0089a7; 
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); // Sombra más pronunciada
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.servicio:hover {
+    background-color: #002d4f; 
+    transform: translateY(-5px); // Efecto de elevación al pasar el mouse
+}
+
+.servicio h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.servicio p {
+    font-size: 1rem;
+    line-height: 1.5; // Mejora la legibilidad
+}

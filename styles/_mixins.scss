@@ -1,0 +1,7 @@
+// styles/_mixins.scss
+
+@mixin card-style($bg-color, $shadow: 0 4px 8px rgba(0, 0, 0, 0.1)) {
+    background-color: $bg-color;
+    box-shadow: $shadow;
+    border-radius: 10px;
+}

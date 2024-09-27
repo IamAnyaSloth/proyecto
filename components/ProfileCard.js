@@ -1,16 +1,17 @@
 // components/ProfileCard.jsx
 import React from 'react';
-import styles from 'C:/Users/Usuario/css-proyecto/proyecto/styles/ProfileCard.module.scss'; // Importa los estilos SASS
+import styles from '../styles/ProfileCard.module.scss'; // Importa los estilos SASS
 
-function ProfileCard() {
+const ProfileCard = ({ name, description, buttonText }) => {
   return (
     <div className={styles.profileCard}>
-      <h2 className={styles.profileTitle}>Anyela</h2>
-      <p className={styles.profileDescription}>
-        Desarrolladora web con un toque de innovación.
-      </p>
+      <div className={styles.header}>{name}</div>
+      <div className={styles.description}>{description}</div>
+      <div className={styles.footer}>
+        <button className={styles.button}>{buttonText}</button>
+      </div>
     </div>
   );
-}
+};
 
 export default ProfileCard;
