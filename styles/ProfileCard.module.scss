@@ -1,12 +1,13 @@
-/* styles/ProfileCard.module.scss */
+// styles/ProfileCard.module.scss
+
+@import './_mixins'; // Importa el archivo de mixins
+
 .profileCard {
-    background-color: #0089a7;
+    @include card-style(#0089a7); // Usando el mixin para aplicar estilos
     padding: 20px;
-    border-radius: 10px;
     width: 300px;
     color: white;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 
     &:hover {
@@ -25,19 +26,21 @@
 }
 
 .footer {
-    margin-top: 15px;
+    margin-top: 20px; 
+    display: flex;
+    justify-content: center;
 }
 
 .button {
-    background-color: #002d4f;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: #002d4f; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 30px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
 
     &:hover {
-        background-color: #005f7f;
+        background-color: #005f7f; 
     }
 }

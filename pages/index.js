@@ -1,11 +1,13 @@
-// pages/index.js
 import Head from 'next/head';
-import ProfileCard from '../components/ProfileCard'; // Importa tu componente de tarjeta de perfil
-import styles from '../styles/Home.module.scss'; // Importa los estilos SASS
+import ProfileCard from '../components/ProfileCard';
+import Header from '../components/Header';
+import Hero from '../components/Hero';
+import Footer from '../components/Footer';
+import styles from '../styles/Home.module.scss';
 
 const Home = () => {
     const profiles = [
-        { name: 'Desarrollo Web', description: 'Construyo aplicaciones web innovadoras y funcionales.', buttonText: 'Ver mas' },
+        { name: 'Desarrollo Web', description: 'Construyo aplicaciones web innovadoras y funcionales.', buttonText: 'Ver más' },
         { name: 'Consultoría', description: 'Optimiza tus soluciones tecnológicas con mi asesoramiento.', buttonText: 'Ver más' }
     ];
 
@@ -20,24 +22,9 @@ const Home = () => {
                 <title>Mi Portafolio</title>
             </Head>
 
-            <header>
-                <nav>
-                    <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Sobre Mi</a></li>
-                        <li><a href="#">Proyectos</a></li>
-                        <li><a href="#">Contacto</a></li>
-                    </ul>
-                </nav>
-            </header>
+            <Header />
 
-            <div className={styles.hero}>
-                <div className={styles.intro}>
-                    <h1>Hola, soy Anyela</h1>
-                    <p>Desarrolladora web con un toque de innovación</p>
-                    <a href="#" className={styles.btn}>Ver proyectos</a>
-                </div>
-            </div>
+            <Hero />
 
             <div className={styles.servicios}>
                 <h2>Servicios</h2>
@@ -48,9 +35,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <footer>
-                <p>© 2024 Mi Portafolio</p>
-            </footer>
+            <Footer />
         </>
     );
 };

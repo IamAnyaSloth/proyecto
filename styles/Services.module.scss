@@ -1,5 +1,3 @@
-// styles/Services.module.scss
-
 .servicios {
     padding: 50px 0;
     text-align: center;
@@ -33,7 +31,7 @@
 
 .servicio:hover {
     background-color: #002d4f; 
-    transform: translateY(-5px); // Efecto de elevación al pasar el mouse
+    transform: translateY(-5px); 
 }
 
 .servicio h3 {

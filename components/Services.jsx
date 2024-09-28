@@ -1,4 +1,3 @@
-// components/Services.jsx
 import React from 'react';
 
 const Services = () => {
