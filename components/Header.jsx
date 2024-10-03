@@ -1,18 +1,19 @@
 import React from 'react';
+import Link from 'next/link'; // Asegúrate de importar Link
 
 const Header = () => {
-  return (
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Sobre Mi</a></li>
-          <li><a href="#">Proyectos</a></li>
-          <li><a href="#">Contacto</a></li>
-        </ul>
-      </nav>
-    </header>
-  );
+    return (
+        <header>
+            <nav>
+                <ul>
+                    <li><Link href="/">Inicio</Link></li>
+                    <li><Link href="/about">Sobre MÍ</Link></li>
+                    <li><Link href="/projects">Proyectos</Link></li>
+                    <li><Link href="/contact">Contacto</Link></li>
+                </ul>
+            </nav>
+        </header>
+    );
 };
 
 export default Header;

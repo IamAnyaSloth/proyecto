@@ -1,11 +1,12 @@
+// styles/variables.scss
 $primary-color: #0089a7;
 $secondary-color: #0d1b4c;
-$background-gradient: linear-gradient(to bottom, #f4f4f4, #e6f2f6);
-$hover-color: #002d4f;
+$background-color: #f4f4f4;
+$white: white;
+$dark-color: #002d4f;
 
-$font-family: Arial, sans-serif;
-$border-radius: 30px;
-$padding: 10px 25px;
-$font-size-large: 2.5rem;
-$font-size-medium: 1.5rem;
-$font-size-small: 1rem;
+$padding-large: 50px 0;
+$padding-medium: 20px;
+$padding-small: 10px;
+$border-radius: 10px; // Asegúrate de que esta variable esté definida
+$box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);

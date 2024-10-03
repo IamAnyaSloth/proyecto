@@ -1,0 +1,45 @@
+.aboutSection {
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
+    color: #333;
+    
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+    }
+    
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #dcdcdc; /* Color del fondo del párrafo */
+        border-radius: 15px; /* Bordes redondeados */
+        padding: 20px; /* Espaciado interno */
+    }
+
+    .skillsContainer {
+        display: flex;
+        justify-content: space-around; /* Espaciado entre los elementos */
+        align-items: center; /* Centrar verticalmente */
+        flex-wrap: wrap; /* Asegúrate de que los elementos se envuelvan en pantallas pequeñas */
+        margin-top: 40px;
+
+        .skill {
+            background-color: #0089a7; /* Color de fondo para cada habilidad */
+            border-radius: 20px; /* Bordes redondeados */
+            padding: 20px; /* Espaciado interno */
+            color: white; /* Color del texto */
+            width: 200px; /* Ancho de cada habilidad */
+            text-align: center; /* Centrar el texto */
+            transition: transform 0.3s ease; /* Transición suave para el efecto hover */
+            margin: 10px; /* Margen entre habilidades */
+
+            &:hover {
+                transform: translateY(-5px); /* Efecto hover: eleva el card */
+            }
+        }
+    }
+}

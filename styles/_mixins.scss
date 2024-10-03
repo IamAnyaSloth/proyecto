@@ -1,7 +1,11 @@
 // styles/_mixins.scss
+@import './variables'; // Asegúrate de importar variables
 
-@mixin card-style($bg-color, $shadow: 0 4px 8px rgba(0, 0, 0, 0.1)) {
+@mixin card-style($bg-color) {
     background-color: $bg-color;
-    box-shadow: $shadow;
-    border-radius: 10px;
+    border-radius: $border-radius; // Usa la variable importada
+    box-shadow: $box-shadow;
+    color: $white;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }

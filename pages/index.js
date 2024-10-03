@@ -7,8 +7,8 @@ import styles from '../styles/Home.module.scss';
 
 const Home = () => {
     const profiles = [
-        { name: 'Desarrollo Web', description: 'Construyo aplicaciones web innovadoras y funcionales.', buttonText: 'Ver más' },
-        { name: 'Consultoría', description: 'Optimiza tus soluciones tecnológicas con mi asesoramiento.', buttonText: 'Ver más' }
+        { name: 'Desarrollo Web', description: 'Construyo aplicaciones web innovadoras y funcionales.' },
+        { name: 'Consultoría', description: 'Optimiza tus soluciones tecnológicas con mi asesoramiento.' }
     ];
 
     return (
@@ -27,7 +27,7 @@ const Home = () => {
             <Hero />
 
             <div className={styles.servicios}>
-                <h2>Servicios</h2>
+                <h1>Servicios</h1>
                 <div className={styles.serviciosContainer}>
                     {profiles.map((profile, index) => (
                         <ProfileCard key={index} {...profile} />
