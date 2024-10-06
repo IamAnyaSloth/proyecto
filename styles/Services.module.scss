@@ -8,9 +8,8 @@
     font-size: 2rem;
     margin-bottom: 30px;
     color: #0d1b4c;
-    text-transform: uppercase; // Añade un estilo más moderno
+    text-transform: uppercase; 
 }
-
 .servicios-container {
     display: flex;
     justify-content: center;
@@ -24,7 +23,7 @@
     width: 300px;
     color: white;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); // Sombra más pronunciada
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); 
     text-decoration: none;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
@@ -41,15 +40,15 @@
 
 .servicio p {
     font-size: 1rem;
-    line-height: 1.5; // Mejora la legibilidad
+    line-height: 1.5; 
 }
 
 .servicio:focus {
-    outline: 2px solid $secondary-color; // Un estilo de foco que mejore la accesibilidad
+    outline: 2px solid $secondary-color; 
 }
 
 @media (max-width: 600px) {
     .servicio {
-        width: 90%; // Ajustar el ancho en pantallas pequeñas
+        width: 90%; 
     }
 }

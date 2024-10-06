@@ -1,9 +1,8 @@
-// styles/ProfileCard.module.scss
-@import './variables'; // Importa las variables necesarias
-@import './_mixins'; // Importa el archivo de mixins
+@import './variables'; 
+@import './_mixins'; 
 
 .profileCard {
-    @include card-style($primary-color); // Usando el mixin para aplicar estilos
+    @include card-style($primary-color); 
     padding: $padding-medium;
     width: 300px;
     transition: transform 0.3s ease;
@@ -29,7 +28,7 @@
     }
 
     @media (max-width: 600px) {
-        width: 90%; // Ajustar el ancho en pantallas pequeñas
-        padding: $padding-small; // Reducir el padding
+        width: 90%; 
+        padding: $padding-small; 
     }
 }

@@ -1,8 +1,7 @@
-// pages/projects.js
 import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import styles from '../styles/Projects.module.scss'; // Asegúrate de crear este archivo de estilos
+import styles from '../styles/Projects.module.scss'; 
 
 const Projects = () => {
     return (
@@ -26,7 +25,6 @@ const Projects = () => {
                     <h2>Proyecto 2</h2>
                     <p>Una breve descripción del proyecto.</p>
                 </div>
-                {/* Agrega más proyectos aquí */}
             </div>
             <Footer />
         </>
