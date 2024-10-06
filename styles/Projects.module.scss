@@ -1,0 +1,28 @@
+@import './variables'; // Asegúrate de importar las variables necesarias
+@import './_mixins'; // Asegúrate de importar los mixins si los usas aquí
+
+.projectsSection {
+    padding: $padding-large; // Usar padding de la variable
+    text-align: center;
+    background-color: $background-color; // Usar el color de fondo de la variable
+}
+
+.projectCard {
+    @include card-style($primary-color); // Usar el mixin para aplicar estilos de tarjeta
+    padding: $padding-medium; // Usar padding de la variable
+    width: 300px; // Ancho fijo
+    margin: 20px auto; // Centrar el proyecto
+
+    h2 {
+        font-size: 1.5rem; // Tamaño del texto del encabezado
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 1rem; // Tamaño del texto de la descripción
+        margin: 15px 0;
+    }
+    &:hover {
+        transform: translateY(-5px); /* Efecto hover: eleva el card */
+    }
+}
