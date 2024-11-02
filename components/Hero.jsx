@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="intro">
         <h1>Hola, soy Anyela</h1>
         <p>Desarrolladora web con un toque de innovación</p>
-        <a href="#" className="btn">Ver proyectos</a>
+        <a href="/projects" className="btn">Ver proyectos</a>
       </div>
     </div>
   );

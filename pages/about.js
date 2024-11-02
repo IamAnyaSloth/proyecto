@@ -16,7 +16,7 @@ const About = () => {
 
             <Header />
             <div className={styles.aboutSection}>
-                <h1>Sobre MÍ</h1>
+                <h2>Sobre MÍ</h2>
                 <p>
                     Desarrolladora web apasionada por la tecnología y la innovación. 
                     Mi objetivo es crear soluciones digitales que no solo sean funcionales 

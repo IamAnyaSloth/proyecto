@@ -1,45 +1,85 @@
 .aboutSection {
-    padding: 50px;
+    width: 100vw; // Ocupa todo el ancho de la pantalla
+    height: 85vh; // Ocupa toda la altura de la pantalla
+    padding: 40px;
     background-color: #f4f4f4;
     text-align: center;
     color: #333;
     
-    h1 {
-        font-size: 2.5rem;
-        margin-bottom: 30px;
+    h2 {
+        font-size: 2.2rem; // Ajuste moderado para que se vea bien en todas las pantallas
+        margin-bottom: 25px;
     }
     
     p {
-        font-size: 1.2rem;
-        margin-bottom: 30px;
-        max-width: 800px;
+        font-size: 1.1rem; // Un poco más grande que antes
+        margin-bottom: 25px;
+        max-width: 85%; // Ocupa más espacio en pantallas grandes
         margin-left: auto;
         margin-right: auto;
         background-color: #dcdcdc; 
         border-radius: 15px; 
-        padding: 20px; 
+        padding: 18px; 
     }
 
     .skillsContainer {
         display: flex;
-        justify-content: space-around; 
+        justify-content: center; 
         align-items: center; 
         flex-wrap: wrap; 
-        margin-top: 40px;
+        gap: 20px; // Espaciado uniforme entre habilidades
+        margin-top: 35px;
 
         .skill {
             background-color: #0089a7; 
             border-radius: 20px; 
-            padding: 20px; 
+            padding: 18px;
             color: white; 
-            width: 200px; 
+            width: 180px; // Tamaño moderado para todas las pantallas
             text-align: center; 
             transition: transform 0.3s ease; 
-            margin: 10px; 
+            margin: 10px;
 
             &:hover {
                 transform: translateY(-5px); 
             }
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 25px;
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 1rem;
+            padding: 15px;
+        }
+
+        .skillsContainer .skill {
+            width: 140px;
+            padding: 12px;
+        }
+    }
+    
+    @media (min-width: 1200px) {
+        padding: 60px; // Aumenta el padding para pantallas muy grandes
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 1.3rem;
+            padding: 20px;
+            max-width: 70%; // Más ancho en pantallas grandes
+        }
+
+        .skillsContainer .skill {
+            width: 200px;
+            padding: 20px;
         }
     }
 }
