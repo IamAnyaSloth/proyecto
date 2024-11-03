@@ -1,3 +1,8 @@
+@import './variables';
+@import './mixins';
+@import './animations';
+@import './compatibility';
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +17,7 @@ body {
 
 header {
     background-color: #0d1b4c;
-    padding: 2rem 0; // Aumenta el padding superior e inferior
+    padding: 2rem 0; 
     text-align: center;
 }
 

@@ -1,4 +1,5 @@
 @import './variables';
+@import './compatibility';
 
 .projects-container {
   display: flex;
@@ -12,12 +13,13 @@
     font-size: 2.5em;
     margin-bottom: 100px;
     text-align: center;
+    animation: sparkAppear 0.6s ease-out forwards; // Título con chispeo al aparecer
   }
 }
 
 .projects-bottom-section {
-  width: 100vw; // Ocupa todo el ancho de la pantalla
-  height: 60vh; // Ocupa toda la altura de la pantalla
+  width: 100vw;
+  height: 60vh;
   background: linear-gradient(135deg, #4fc3ff 0%, #003c71 100%);
   display: flex;
   justify-content: center;
@@ -25,17 +27,17 @@
 }
 
 .projects-list-container {
-  width: 100%; 
-  max-width: 1400px; // Para pantallas grandes
+  width: 100%;
+  max-width: 1400px;
   padding: 0 20px;
 }
 
 .projects-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Distribuye las tarjetas en columnas
-  gap: 40px; // Espacio entre las tarjetas
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
   width: 100%;
-  height: 100%; // Asegura que la lista ocupe el espacio vertical disponible
+  height: 100%;
 
   .project-card {
     display: flex;
@@ -43,26 +45,37 @@
     align-items: center;
     justify-content: center;
     background-color: $dark-color;
-    padding: 30px; // Aumenta el padding para mayor tamaño
+    padding: 30px;
     border-radius: $border-radius;
     color: $white;
+    min-height: 200px;
+    transform: scale(0.95);
+    opacity: 0; // Comienza invisible
+    animation: cardEnter 0.5s ease-out forwards; // Animación de entrada para la tarjeta
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    min-height: 200px; // Altura mínima para que ocupen más espacio vertical
-
+    
     &:hover {
-      transform: translateY(-8px);
-      box-shadow: $box-shadow;
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0px 0px 15px rgba(255, 255, 100, 0.7); // Efecto de destello dorado al pasar
+      background-color: lighten($dark-color, 10%);
     }
 
     .project-icon {
       width: 80px;
       height: 80px;
-      background-color: $primary-color;
       border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 20px; // Separación con el contenido
+      margin-bottom: 20px;
+      overflow: hidden;
+      animation: spinIn 0.7s ease-out; // Giro al aparecer
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
 
     .project-info {
@@ -71,14 +84,63 @@
       h3 {
         margin: 0;
         font-size: 1.8em;
+        color: lighten($primary-color, 10%);
+        animation: fadeColor 2s ease-in-out infinite; // Cambio de color constante
         transition: color 0.3s ease;
       }
-      
+
       p {
         margin: 10px 0 0;
         color: #ccc;
         font-size: 1em;
       }
     }
+  }
+}
+
+// Animaciones
+@keyframes sparkAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+    box-shadow: 0 0 10px rgba(255, 255, 100, 0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
+
+@keyframes cardEnter {
+  0% {
+    transform: translateY(20px) scale(0.95);
+    opacity: 0;
+    box-shadow: 0 0 10px rgba(255, 255, 100, 0.5);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    box-shadow: none;
+  }
+}
+
+@keyframes spinIn {
+  from {
+    transform: rotate(-180deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeColor {
+  0%, 100% {
+    color: lighten($primary-color, 10%);
+  }
+  50% {
+    color: darken($primary-color, 10%);
   }
 }

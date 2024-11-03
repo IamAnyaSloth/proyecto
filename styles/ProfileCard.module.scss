@@ -1,5 +1,6 @@
 @import './variables'; 
 @import './_mixins'; 
+@import './compatibility';
 
 .profileCard {
     @include card-style($primary-color); 

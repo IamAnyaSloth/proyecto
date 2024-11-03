@@ -1,4 +1,5 @@
 @import './variables'; 
+@import './compatibility';
 
 @mixin card-style($bg-color) {
     background-color: $bg-color;

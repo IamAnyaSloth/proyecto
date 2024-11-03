@@ -21,17 +21,21 @@ const Projects = () => {
           <div className={styles['projects-list-container']}>
             <div className={styles['projects-list']}>
               <div className={styles['project-card']}>
-                <div className={styles['project-icon']}></div>
+                <div className={styles['project-icon']}>
+                <img src="/imagenes/comida.png" alt="Logo de Restaurante" />
+                </div>
                 <div className={styles['project-info']}>
-                  <h3>Proyecto 1</h3>
-                  <p>Una breve descripción del proyecto.</p>
+                  <h3>Proyecto Restaurante</h3>
+                  <p>Este proyecto web se desarrolló utilizando el framework Spring, con un backend implementado en Eclipse para el manejo de datos relacionados con reservas y usuarios, así como la conexión a bases de datos.</p>
                 </div>
               </div>
               <div className={styles['project-card']}>
-                <div className={styles['project-icon']}></div>
+                <div className={styles['project-icon']}>
+                <img src="/imagenes/carro.jpg" alt="Logo de Carro" />
+                </div>
                 <div className={styles['project-info']}>
-                  <h3>Proyecto 2</h3>
-                  <p>Una breve descripción del proyecto.</p>
+                  <h3>Proyecto Renta de carros</h3>
+                  <p>Este proyecto web de renta de carros se desarrolló en Java utilizando NetBeans y PostgreSQL. Permite a los usuarios buscar vehículos disponibles y realizar reservas en línea, ofreciendo una interfaz intuitiva para una experiencia de usuario fluida.</p>
                 </div>
               </div>
             </div>

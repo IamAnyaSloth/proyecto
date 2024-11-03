@@ -1,0 +1,9 @@
+/* compatibility.scss */
+/* Prefijos para compatibilidad con navegadores más antiguos */
+.element {
+    -webkit-transition: transform 0.5s ease, background-color 0.5s ease; /* Chrome, Safari */
+    -moz-transition: transform 0.5s ease, background-color 0.5s ease; /* Firefox */
+    -o-transition: transform 0.5s ease, background-color 0.5s ease; /* Antiguas versiones de Opera */
+    -ms-transition: transform 0.5s ease, background-color 0.5s ease; /* Internet Explorer */
+    transition: transform 0.5s ease, background-color 0.5s ease; /* Propiedad estándar */
+}

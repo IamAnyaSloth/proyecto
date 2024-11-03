@@ -1,0 +1,128 @@
+@import './variables'; 
+@import './mixins'; 
+@import './compatibility';
+
+// Animaciones para la navegación
+:global(nav ul li a) {
+    position: relative;
+    display: inline-block;
+    color: $dark-color;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+        color: $primary-color;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $secondary-color;
+            animation: shine 0.6s forwards;
+        }
+    }
+}
+
+@keyframes shine {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+// Animaciones para la sección Hero
+.hero .intro h1, .hero .intro p {
+    animation: fadeInZoom 1s ease-out forwards;
+}
+
+@keyframes fadeInZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+// Animaciones para las tarjetas de servicios y proyectos
+.servicios .servicio, .projects-list .project-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    &:hover {
+        transform: translateY(-5px) scale(1.03);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+}
+
+// Animaciones para los botones
+button, .btn {
+    position: relative;
+    overflow: hidden;
+    background-color: $primary-color;
+    color: $white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgba($primary-color, 0.6);
+        animation: pulse 0.8s infinite alternate;
+    }
+}
+
+@keyframes pulse {
+    from {
+        box-shadow: 0 0 5px rgba($primary-color, 0.6);
+    }
+    to {
+        box-shadow: 0 0 15px rgba($primary-color, 0.8);
+    }
+}
+
+// Animaciones para la sección About
+.aboutSection {
+    h2, p {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.8s forwards;
+    }
+
+    h2 {
+        animation-delay: 0.2s; // Retraso para el título
+    }
+
+    p {
+        animation-delay: 0.4s; // Retraso para el párrafo
+    }
+
+    .skillsContainer .skill {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.8s forwards;
+        animation-delay: calc(0.2s * var(--i)); // Retraso basado en el índice
+    }
+}
+
+// Animación de desvanecimiento y entrada
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Animación de desvanecimiento hacia arriba
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
