@@ -19,16 +19,22 @@ header {
     background-color: #0d1b4c;
     padding: 2rem 0; 
     text-align: center;
+    
+    @media (max-width: 768px) {
+        padding: 1rem 0; /* Reducir padding en pantallas pequeñas */
+    }
 }
 
 nav ul {
-    list-style: none;
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en múltiples líneas en pantallas pequeñas */
     padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0 10px; 
+    padding: 5px 0;
 }
 
 nav ul li a {
@@ -40,6 +46,11 @@ nav ul li a {
     background-color: #0089a7;
     border: none;
     transition: background-color 0.3s ease;
+
+    @media (max-width: 768px) {
+        padding: 10px 15px; /* Ajustar padding en pantallas pequeñas */
+        font-size: 0.9rem;   /* Reducir tamaño de fuente en pantallas pequeñas */
+    }
 }
 
 nav ul li a:hover {
@@ -52,8 +63,8 @@ nav ul li a:hover {
     text-align: center;
     color: white;
 
-    @media (max-width: 768px) { 
-        padding: 60px 2%; 
+    @media (max-width: 768px) {
+        padding: 60px 5%; /* Ajustar padding para pantallas pequeñas */
     }
 }
 
@@ -131,7 +142,7 @@ nav ul li a:hover {
     display: flex;                   
     justify-content: space-around;   
     align-items: flex-start;         
-    gap: 40px;                      
+    gap: 40px;                       
     flex-wrap: wrap;   
 
     @media (max-width: 768px) { 
