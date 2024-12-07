@@ -11,3 +11,9 @@ $padding-medium: 20px;
 $padding-small: 10px;
 $border-radius: 10px; 
 $box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+$breakpoint-xs: 480px; // Teléfonos pequeños
+$breakpoint-sm: 768px; // Tablets verticales
+$breakpoint-md: 1024px; // Tablets horizontales o laptops pequeñas
+$breakpoint-lg: 1440px; // Laptops grandes o pantallas de escritorio
+$text-muted: #6c757d;

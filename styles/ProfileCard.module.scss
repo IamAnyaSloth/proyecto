@@ -5,7 +5,7 @@
 .profileCard {
     @include card-style($primary-color); 
     padding: $padding-medium;
-    width: 300px;
+    width: 300px; // Ancho base de la tarjeta
     transition: transform 0.3s ease;
 
     &:hover {
@@ -13,23 +13,47 @@
     }
 
     .header {
-        font-size: 1.5rem;
+        font-size: 1.5rem; // Tamaño del texto en el encabezado
         margin-bottom: 10px;
+
+        @media (max-width: 768px) {
+            font-size: 1.3rem; // Ajuste en tabletas
+        }
+
+        @media (max-width: 480px) {
+            font-size: 1.1rem; // Ajuste en móviles
+        }
     }
 
     .description {
-        font-size: 1rem;
+        font-size: 1rem; // Tamaño del texto de descripción
         margin: 15px 0;
+
+        @media (max-width: 768px) {
+            font-size: 0.9rem; // Ajuste en tabletas
+        }
+
+        @media (max-width: 480px) {
+            font-size: 0.8rem; // Ajuste en móviles
+        }
     }
 
     .footer {
         margin-top: 20px; 
         display: flex;
         justify-content: center;
+
+        @media (max-width: 768px) {
+            margin-top: 15px; // Ajuste de margen en tabletas
+        }
+
+        @media (max-width: 480px) {
+            margin-top: 10px; // Ajuste de margen en móviles
+        }
     }
 
     @media (max-width: 600px) {
-        width: 90%; 
-        padding: $padding-small; 
+        width: 90%; // Ancho completo en pantallas pequeñas
+        padding: $padding-small; // Padding más pequeño en pantallas pequeñas
     }
 }

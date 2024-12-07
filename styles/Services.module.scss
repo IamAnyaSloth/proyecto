@@ -1,56 +1,101 @@
 @import './compatibility';
+@import './variables';
 
 .servicios {
     padding: 50px 0;
     text-align: center;
     background-color: #f4f4f4;
+
+    @media (max-width: 768px) {
+        padding: 30px 10px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 20px 5px;
+    }
 }
 
 .servicios h2 {
     font-size: 2rem;
     margin-bottom: 30px;
     color: #0d1b4c;
-    text-transform: uppercase; 
+    text-transform: uppercase;
+
+    @media (max-width: 768px) {
+        font-size: 1.8rem;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 1.5rem;
+    }
 }
+
 .servicios-container {
     display: flex;
     justify-content: center;
     gap: 40px;
+    flex-wrap: wrap; /* Permite que los elementos se acomoden automáticamente */
+
+    @media (max-width: 768px) {
+        gap: 20px; /* Reduce el espacio entre los servicios */
+    }
+
+    @media (max-width: 480px) {
+        gap: 10px; /* Menor separación en móviles pequeños */
+    }
 }
 
 .servicio {
-    background-color: $primary-color; 
+    background-color: $primary-color;
     padding: 20px;
     border-radius: 10px;
     width: 300px;
     color: white;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     text-decoration: none;
     transition: transform 0.3s ease, background-color 0.3s ease;
+
+    @media (max-width: 768px) {
+        width: 80%; /* Adapta el ancho de cada servicio */
+    }
+
+    @media (max-width: 480px) {
+        width: 100%; /* Ocupa el ancho completo en dispositivos más pequeños */
+    }
 }
 
 .servicio:hover {
-    background-color: #002d4f; 
-    transform: translateY(-5px); 
+    background-color: #002d4f;
+    transform: translateY(-5px);
+}
+
+.servicio:focus {
+    outline: 2px solid $secondary-color;
 }
 
 .servicio h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
+
+    @media (max-width: 768px) {
+        font-size: 1.2rem;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 1rem;
+    }
 }
 
 .servicio p {
     font-size: 1rem;
-    line-height: 1.5; 
-}
+    line-height: 1.5;
 
-.servicio:focus {
-    outline: 2px solid $secondary-color; 
-}
+    @media (max-width: 768px) {
+        font-size: 0.9rem;
+    }
 
-@media (max-width: 600px) {
-    .servicio {
-        width: 90%; 
+    @media (max-width: 480px) {
+        font-size: 0.8rem;
     }
 }

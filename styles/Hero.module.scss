@@ -1,13 +1,57 @@
 @import './compatibility'; 
+@import './variables'; 
+
+header {
+    background-color: #0d1b4c;
+    padding: 1rem 0; // Espaciado en el header
+    width: 100%; // Asegura que el header ocupe el 100% del ancho
+    text-align: center; // Centrar el texto en el header
+}
+
+nav {
+    display: flex; // Usar flexbox para el menú
+    justify-content: center; // Centrar los elementos del menú
+    flex-wrap: wrap; // Permitir que el menú se ajuste en pantallas pequeñas
+    padding: 1rem 0; // Espaciado alrededor del menú
+
+    ul {
+        list-style: none;
+        padding: 0; // Eliminar padding por defecto
+        margin: 0; // Eliminar margen por defecto
+
+        li {
+            margin: 0 15px; // Espacio entre los elementos del menú
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                padding: 10px 25px; // Espaciado del enlace
+                border-radius: 30px;
+                background-color: #0089a7;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: #002d4f;
+                }
+            }
+        }
+    }
+}
 
 .hero {
     background: linear-gradient(135deg, #4fc3ff 0%, #003c71 100%);
-    padding: 80px 2%; 
+    padding: 80px 5%; 
     text-align: center;
     color: white;
 
     @media (max-width: 768px) { 
-        padding: 60px 5%; 
+        padding: 60px 8%; 
+    }
+
+    @media (max-width: 480px) { 
+        padding: 50px 10%;
+        font-size: 0.9rem; 
     }
 }
 
@@ -16,11 +60,17 @@
     padding: 30px;
     border-radius: 20px;
     display: inline-block;
+    max-width: 600px; // Controla el ancho máximo
 
     @media (max-width: 768px) { 
         padding: 20px;
         width: 90%; 
         text-align: center; 
+    }
+
+    @media (max-width: 480px) {
+        padding: 15px;
+        font-size: 0.9rem; 
     }
 }
 
@@ -37,14 +87,26 @@
         padding: 10px 15px; 
         font-size: 0.9em; 
     }
+
+    @media (max-width: 480px) {
+        font-size: 0.8em; 
+    }
+
+    &:hover {
+        background-color: #002d4f;
+    }
 }
 
 .servicios {
-    padding: 20px;
-    text-align: center; 
+    padding: 20px 10%;
+    text-align: center;
 
     @media (max-width: 768px) { 
-        padding: 15px; 
+        padding: 15px 8%; 
+    }
+
+    @media (max-width: 480px) { 
+        padding: 10px 5%; 
     }
 }
 
@@ -53,11 +115,15 @@
     justify-content: center; 
     flex-wrap: wrap; 
     gap: 20px; 
-    margin-top: 20px; 
+    margin-top: 20px;
 
     @media (max-width: 768px) { 
         gap: 15px; 
         padding: 0 5%; 
         flex-direction: column; 
+    }
+
+    @media (max-width: 480px) {
+        gap: 10px;
     }
 }
