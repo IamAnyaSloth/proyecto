@@ -4,6 +4,12 @@ import Footer from '../components/Footer';
 import styles from '../styles/About.module.scss';
 import { useState } from 'react';
 import { FaCode, FaFacebook, FaLinkedin, FaRegFileAlt, FaUser } from 'react-icons/fa';
+// _app.js
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';  // Asegúrate de que este esté aquí
+
+
+
 
 const About = () => {
     const [showLanguages, setShowLanguages] = useState(false);
@@ -37,6 +43,51 @@ const About = () => {
                     y ofrecer lo mejor en cada proyecto.
                 </p>
 
+                {/* Carrusel de Bootstrap */}
+                <div id="aboutCarousel" className="carousel slide" data-bs-ride="carousel">
+                    <div className="carousel-inner">
+                        <div className="carousel-item active">
+                            <img src="/imagenes/img1.jpg" className="d-block w-100" alt="Imagen 1" />
+                            <div className="carousel-caption d-none d-md-block">
+                                <h5></h5>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div className="carousel-item">
+                            <img src="/imagenes/img2.jpg" className="d-block w-100" alt="Imagen 2" />
+                            <div className="carousel-caption d-none d-md-block">
+                                <h5></h5>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div className="carousel-item">
+                            <img src="/imagenes/img3.jpg" className="d-block w-100" alt="Imagen 3" />
+                            <div className="carousel-caption d-none d-md-block">
+                                <h5></h5>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        className="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#aboutCarousel"
+                        data-bs-slide="prev"
+                    >
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Anterior</span>
+                    </button>
+                    <button
+                        className="carousel-control-next"
+                        type="button"
+                        data-bs-target="#aboutCarousel"
+                        data-bs-slide="next"
+                    >
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+
                 <div className={styles.cardsContainer}>
                     <div className={styles.card} onClick={toggleLanguages}>
                         <FaCode className={styles.icon} />
@@ -59,46 +110,46 @@ const About = () => {
                 {showLanguages && (
                     <div className={`${styles.languageList} ${styles.animate}`}>
                         <ul>
-                        <li className={`${styles.javascript}`}>
-                            <img src="/imagenes/js.png" alt="JavaScript" className={styles.languageImage} />
-                            JavaScript
-                        </li>
-                        <li className={`${styles.python}`}>
-                            <img src="/imagenes/python.png" alt="Python" className={styles.languageImage} />
-                            Python
-                        </li>
-                        <li className={`${styles.java}`}>
-                            <img src="/imagenes/java.png" alt="Java" className={styles.languageImage} />
-                            Java
-                        </li>                   
+                            <li className={`${styles.javascript}`}>
+                                <img src="/imagenes/js.png" alt="JavaScript" className={styles.languageImage} />
+                                JavaScript
+                            </li>
+                            <li className={`${styles.python}`}>
+                                <img src="/imagenes/python.png" alt="Python" className={styles.languageImage} />
+                                Python
+                            </li>
+                            <li className={`${styles.java}`}>
+                                <img src="/imagenes/java.png" alt="Java" className={styles.languageImage} />
+                                Java
+                            </li>                   
                         </ul>
                     </div>
                 )}
 
-{showSocials && (
-    <div className={`${styles.socialList} ${styles.animate}`}>
-        <ul>
-            <li>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                    <img src="/imagenes/face.png" alt="Facebook" className={styles.socialImage} />
-                    Facebook
-                </a>
-            </li>
-            <li>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                    <img src="/imagenes/ln.png" alt="LinkedIn" className={styles.socialImage} />
-                    LinkedIn
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                    <img src="/imagenes/gh.jpg" alt="GitHub" className={styles.socialImage} />
-                    GitHub
-                </a>
-            </li>
-        </ul>
-    </div>
-)}
+                {showSocials && (
+                    <div className={`${styles.socialList} ${styles.animate}`}>
+                        <ul>
+                            <li>
+                                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                                    <img src="/imagenes/face.png" alt="Facebook" className={styles.socialImage} />
+                                    Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                                    <img src="/imagenes/ln.png" alt="LinkedIn" className={styles.socialImage} />
+                                    LinkedIn
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                                    <img src="/imagenes/gh.jpg" alt="GitHub" className={styles.socialImage} />
+                                    GitHub
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                )}
 
                 {showReferences && (
                     <div className={`${styles.referencesList} ${styles.animate}`}>
