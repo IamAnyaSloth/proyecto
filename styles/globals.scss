@@ -28,16 +28,24 @@ header {
     padding: 2rem 0;
     width: 100%;
     text-align: center;
+<<<<<<< HEAD
     min-height: 10vh;
     animation: fadeIn 1s ease-out;
 
     @media (max-width: 768px) {
         padding: 1.5rem 0;
+=======
+    
+    @media (max-width: 768px) {
+        padding: 1rem 0; /* Reducir padding en pantallas pequeñas */
+>>>>>>> 84b2f5826aa358375cadb758ce58e67e491aaaaa
     }
 }
 
 nav ul {
-    list-style: none;
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en múltiples líneas en pantallas pequeñas */
     padding: 0;
     display: flex;
     justify-content: center;
@@ -52,11 +60,16 @@ nav ul {
 }
 
 nav ul li {
+<<<<<<< HEAD
     margin: 0 15px;
 
     @media (max-width: 768px) {
         margin: 5px 0;
     }
+=======
+    margin: 0 10px; 
+    padding: 5px 0;
+>>>>>>> 84b2f5826aa358375cadb758ce58e67e491aaaaa
 }
 
 nav ul li a {
@@ -68,6 +81,7 @@ nav ul li a {
     background-color: #0089a7;
     border: none;
     transition: background-color 0.3s ease;
+<<<<<<< HEAD
     animation: fadeInUp 1s ease-out;
 
     @media (max-width: 768px) {
@@ -75,6 +89,27 @@ nav ul li a {
         padding: 8px 20px;
         width: 80%;
         text-align: center;
+=======
+
+    @media (max-width: 768px) {
+        padding: 10px 15px; /* Ajustar padding en pantallas pequeñas */
+        font-size: 0.9rem;   /* Reducir tamaño de fuente en pantallas pequeñas */
+    }
+}
+
+nav ul li a:hover {
+    background-color: #002d4f;
+}
+
+.hero {
+    background: linear-gradient(135deg, #4fc3ff 0%, #003c71 100%);
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+
+    @media (max-width: 768px) {
+        padding: 60px 5%; /* Ajustar padding para pantallas pequeñas */
+>>>>>>> 84b2f5826aa358375cadb758ce58e67e491aaaaa
     }
 
     &:hover {
@@ -171,11 +206,19 @@ nav ul li a {
 }
 
 .servicios-container {
+<<<<<<< HEAD
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 40px;
     flex-wrap: wrap;
+=======
+    display: flex;                   
+    justify-content: space-around;   
+    align-items: flex-start;         
+    gap: 40px;                       
+    flex-wrap: wrap;   
+>>>>>>> 84b2f5826aa358375cadb758ce58e67e491aaaaa
 
     @media (max-width: 768px) {
         flex-direction: column;
