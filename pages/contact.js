@@ -8,6 +8,7 @@ import { faEnvelope, faUser, faCommentDots } from '@fortawesome/free-solid-svg-i
 import emailjs from '@emailjs/browser';
 
 
+
 const Contact = () => {
   // Función para manejar el envío del formulario
   const handleSubmit = (e) => {
