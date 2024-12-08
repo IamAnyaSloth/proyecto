@@ -72,7 +72,12 @@
         }
     }
 }
-
+.icon {
+    margin-right: 10px;
+    color: $primary-color;
+    font-size: 1.2em;
+  }
+  
 // Animaciones
 @keyframes fadeIn {
     0% {
