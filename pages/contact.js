@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import ProfileCard from '../components/ProfileCard';
+import ProfileCard from '../components/ProfileCard'; // Si no lo usas, lo puedes eliminar
 import styles from '../styles/Contact.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faUser, faCommentDots } from '@fortawesome/free-solid-svg-icons';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   // Función para manejar el envío del formulario
@@ -21,9 +21,14 @@ const Contact = () => {
       message: formData.get('message'),
     };
 
+    // Validación básica antes de enviar el correo
+    if (!data.name || !data.email || !data.message) {
+      alert('Por favor, completa todos los campos antes de enviar el mensaje.');
+      return;
+    }
+
     // Envía los datos a EmailJS
     emailjs.sendForm('service_h622jqc', 'template_wq94v8r', form, 'WyB425g-84qgWPS1p')
-
       .then((result) => {
         console.log('Correo enviado:', result.text);
         alert('¡Tu mensaje ha sido enviado correctamente!');
@@ -51,17 +56,17 @@ const Contact = () => {
           <label>
             <FontAwesomeIcon icon={faUser} className={styles.icon} />
             Nombre:
-            <input type="text" name="name" placeholder="Tu nombre" />
+            <input type="text" name="name" placeholder="Tu nombre" required />
           </label>
           <label>
             <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
             Correo Electrónico:
-            <input type="email" name="email" placeholder="Tu correo electrónico" />
+            <input type="email" name="email" placeholder="Tu correo electrónico" required />
           </label>
           <label>
             <FontAwesomeIcon icon={faCommentDots} className={styles.icon} />
             Mensaje:
-            <textarea name="message" placeholder="Escribe tu mensaje"></textarea>
+            <textarea name="message" placeholder="Escribe tu mensaje" required></textarea>
           </label>
           <button type="submit">Enviar</button>
         </form>
