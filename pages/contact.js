@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faUser, faCommentDots } from '@fortawesome/free-solid-svg-icons';
 import emailjs from '@emailjs/browser';
 
+
 const Contact = () => {
   // Función para manejar el envío del formulario
   const handleSubmit = (e) => {
