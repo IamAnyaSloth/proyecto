@@ -226,18 +226,6 @@
     border-radius: 10px;  // Bordes redondeados opcionales
 }
 
-.carousel-control-left, .carousel-control-right {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    z-index: 10;
-}
 
 .carousel-control-left {
     left: 10px;

@@ -49,22 +49,17 @@ const About = () => {
                         <div className="carousel-item active">
                             <img src="/imagenes/img1.jpg" className="d-block w-100" alt="Imagen 1" />
                             <div className="carousel-caption d-none d-md-block">
-                                <h5></h5>
-                                <p></p>
                             </div>
                         </div>
                         <div className="carousel-item">
                             <img src="/imagenes/img2.jpg" className="d-block w-100" alt="Imagen 2" />
                             <div className="carousel-caption d-none d-md-block">
-                                <h5></h5>
-                                <p></p>
                             </div>
                         </div>
                         <div className="carousel-item">
                             <img src="/imagenes/img3.jpg" className="d-block w-100" alt="Imagen 3" />
                             <div className="carousel-caption d-none d-md-block">
-                                <h5></h5>
-                                <p></p>
+
                             </div>
                         </div>
                     </div>
