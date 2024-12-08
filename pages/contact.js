@@ -5,8 +5,34 @@ import ProfileCard from '../components/ProfileCard';
 import styles from '../styles/Contact.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faUser, faCommentDots } from '@fortawesome/free-solid-svg-icons';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
+  // Función para manejar el envío del formulario
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Previene el comportamiento predeterminado del formulario (recarga de página)
+
+    // Obtén los valores del formulario
+    const form = e.target;
+    const formData = new FormData(form);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      message: formData.get('message'),
+    };
+
+    // Envía los datos a EmailJS
+    emailjs.sendForm('service_h622jqc', 'template_wq94v8r', form, 'WyB425g-84qgWPS1p')
+
+      .then((result) => {
+        console.log('Correo enviado:', result.text);
+        alert('¡Tu mensaje ha sido enviado correctamente!');
+      }, (error) => {
+        console.log('Error al enviar correo:', error.text);
+        alert('Ocurrió un error al enviar el mensaje. Intenta nuevamente.');
+      });
+  };
+
   return (
     <>
       <Head>
@@ -21,21 +47,21 @@ const Contact = () => {
 
       <div className={styles['contact-container']}>
         <h2>Contacto</h2>
-        <form className={styles['contact-form']}>
+        <form className={styles['contact-form']} onSubmit={handleSubmit}>
           <label>
             <FontAwesomeIcon icon={faUser} className={styles.icon} />
             Nombre:
-            <input type="text" placeholder="Tu nombre" />
+            <input type="text" name="name" placeholder="Tu nombre" />
           </label>
           <label>
             <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
             Correo Electrónico:
-            <input type="email" placeholder="Tu correo electrónico" />
+            <input type="email" name="email" placeholder="Tu correo electrónico" />
           </label>
           <label>
             <FontAwesomeIcon icon={faCommentDots} className={styles.icon} />
             Mensaje:
-            <textarea placeholder="Escribe tu mensaje"></textarea>
+            <textarea name="message" placeholder="Escribe tu mensaje"></textarea>
           </label>
           <button type="submit">Enviar</button>
         </form>
