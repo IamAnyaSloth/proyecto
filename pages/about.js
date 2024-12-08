@@ -1,15 +1,10 @@
+import { useEffect } from 'react';
 import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import styles from '../styles/About.module.scss';
 import { useState } from 'react';
 import { FaCode, FaFacebook, FaLinkedin, FaRegFileAlt, FaUser } from 'react-icons/fa';
-// _app.js
-import 'bootstrap/dist/css/bootstrap.min.css'; 
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';  // Asegúrate de que este esté aquí
-
-
-
 
 const About = () => {
     const [showLanguages, setShowLanguages] = useState(false);
@@ -21,6 +16,13 @@ const About = () => {
     const toggleSocials = () => setShowSocials(!showSocials);
     const toggleReferences = () => setShowReferences(!showReferences);
     const toggleInfo = () => setShowInfo(!showInfo);
+
+    useEffect(() => {
+        // Load Bootstrap JS on the client-side only
+        if (typeof window !== 'undefined') {
+            import('bootstrap/dist/js/bootstrap.bundle.min.js');
+        }
+    }, []);
 
     return (
         <>
@@ -48,19 +50,12 @@ const About = () => {
                     <div className="carousel-inner">
                         <div className="carousel-item active">
                             <img src="/imagenes/img1.jpg" className="d-block w-100" alt="Imagen 1" />
-                            <div className="carousel-caption d-none d-md-block">
-                            </div>
                         </div>
                         <div className="carousel-item">
                             <img src="/imagenes/img2.jpg" className="d-block w-100" alt="Imagen 2" />
-                            <div className="carousel-caption d-none d-md-block">
-                            </div>
                         </div>
                         <div className="carousel-item">
                             <img src="/imagenes/img3.jpg" className="d-block w-100" alt="Imagen 3" />
-                            <div className="carousel-caption d-none d-md-block">
-
-                            </div>
                         </div>
                     </div>
                     <button
